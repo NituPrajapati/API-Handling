@@ -16,9 +16,9 @@ export const RqIndividual = () => {
         <>
         <div>
         <div>
-            <p>{data.id}</p>
-            <p>{data.title}</p>
-            <p>{data.body}</p>   
+            <p>ID: {data.id}</p>
+            <p>Title: {data.title}</p>
+            <p>Data: {data.body}</p>   
         </div>
             <NavLink to={"/rq"}><button className="w-28 h-12 m-10 bg-[#444444] text-white rounded-2xl">Back</button></NavLink>
         </div>

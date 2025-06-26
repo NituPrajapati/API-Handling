@@ -7,7 +7,7 @@ const api = axios.create({
 // to fetch the data
 export const fetchPosts = async (pageNumber) => {
   try {
-    const res = await api.get(`/posts?_start=${pageNumber}&_limit=3`);
+    const res = await api.get(`/posts?_start=${pageNumber}&_limit=4`);
     return res.status === 200 ? res.data : [];
   } catch (error) {
     console.log(error);
@@ -21,4 +21,13 @@ export const fetchInvPost = async (id) => {
   } catch (error) {
     console.log(error);
   }
+};
+
+
+export const deletePost = (id) =>{
+  return api.delete(`/posts/${id}`);
+};
+
+export const updatePost = (id) =>{
+  return api.put(`/posts/${id}`,{title:"update"});
 };
